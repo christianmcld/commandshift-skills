@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1080">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1080px; height: 1350px;
+    background: #0A0A0F;
+    font-family: 'Inter', sans-serif;
+    color: #F8FAFC;
+    overflow: hidden;
+  }
+  .slide {
+    width: 100%; height: 100%;
+    padding: 80px;
+    display: flex; flex-direction: column; justify-content: center;
+    position: relative;
+  }
+  .slide::before {
+    content: '';
+    position: absolute; top: -50%; right: -50%;
+    width: 100%; height: 100%;
+    background: radial-gradient(circle, rgba(139,92,246,0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .context {
+    font-size: 24px; font-weight: 500;
+    color: #A78BFA; margin-bottom: 40px;
+    text-transform: uppercase; letter-spacing: 3px;
+  }
+  .subheadline {
+    font-size: 44px; font-weight: 700;
+    line-height: 1.2; letter-spacing: -1px;
+    margin-bottom: 40px;
+  }
+  .highlight {
+    background: linear-gradient(135deg, #8B5CF6, #A78BFA);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .feature-list { list-style: none; }
+  .feature-list li {
+    font-size: 30px; line-height: 1.5;
+    padding: 16px 0; padding-left: 48px;
+    position: relative; color: #CBD5E1;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+  }
+  .feature-list li::before {
+    content: '\2713';
+    position: absolute; left: 0;
+    color: #8B5CF6; font-weight: 700; font-size: 28px;
+  }
+  .slide-number {
+    position: absolute; bottom: 40px; right: 80px;
+    font-size: 16px; font-weight: 500;
+    color: #64748B; letter-spacing: 2px;
+  }
+  .brand {
+    position: absolute; bottom: 40px; left: 80px;
+    font-size: 16px; font-weight: 600;
+    color: #64748B; letter-spacing: 1px;
+  }
+</style>
+</head>
+<body>
+  <div class="slide">
+    <p class="context">The Alternative: Claude Code</p>
+    <h2 class="subheadline"><span class="highlight">Claude Code</span> is an agent.<br>It actually does things.</h2>
+    <ul class="feature-list">
+      <li>Reads and writes your files</li>
+      <li>Runs shell commands</li>
+      <li>Scrapes websites live</li>
+      <li>Deploys to production</li>
+      <li>Remembers with persistent memory</li>
+    </ul>
+    <span class="brand">@commandshift</span>
+    <span class="slide-number">04/08</span>
+  </div>
+</body>
+</html>

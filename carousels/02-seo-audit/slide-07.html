@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1080">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1080px; height: 1350px;
+    background: #0A0A0F;
+    font-family: 'Inter', sans-serif;
+    color: #F8FAFC;
+    overflow: hidden;
+  }
+  .slide {
+    width: 100%; height: 100%;
+    padding: 80px;
+    display: flex; flex-direction: column; justify-content: center;
+    position: relative;
+  }
+  .slide::before {
+    content: '';
+    position: absolute; top: -50%; right: -50%;
+    width: 100%; height: 100%;
+    background: radial-gradient(circle, rgba(139,92,246,0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .step-badge {
+    display: inline-flex;
+    align-items: center; justify-content: center;
+    width: 80px; height: 80px;
+    background: linear-gradient(135deg, #8B5CF6, #6D28D9);
+    border-radius: 50%;
+    font-size: 36px; font-weight: 800;
+    margin-bottom: 32px;
+  }
+  .step-title {
+    font-size: 52px; font-weight: 800;
+    line-height: 1.1; letter-spacing: -1px;
+    margin-bottom: 24px;
+  }
+  .step-desc {
+    font-size: 30px; font-weight: 400;
+    line-height: 1.6; color: #CBD5E1;
+    margin-bottom: 32px;
+  }
+  .code-block {
+    background: #12121A;
+    border: 1px solid rgba(139,92,246,0.2);
+    border-radius: 12px;
+    padding: 32px;
+    font-family: 'SF Mono', 'Fira Code', monospace;
+    font-size: 21px;
+    color: #A78BFA;
+    line-height: 1.7;
+  }
+  .code-block .comment { color: #64748B; }
+  .code-block .fix { color: #22C55E; }
+  .slide-number {
+    position: absolute; bottom: 40px; right: 80px;
+    font-size: 16px; font-weight: 500;
+    color: #64748B; letter-spacing: 2px;
+  }
+  .brand {
+    position: absolute; bottom: 40px; left: 80px;
+    font-size: 16px; font-weight: 600;
+    color: #64748B; letter-spacing: 1px;
+  }
+</style>
+</head>
+<body>
+  <div class="slide">
+    <div class="step-badge">6</div>
+    <h2 class="step-title">Get Exact Fixes</h2>
+    <p class="step-desc">Not vague advice. Actual code and copy changes you can implement right now.</p>
+    <div class="code-block">
+      <span class="comment">// Fix: Missing H1 tag</span><br>
+      <span class="fix">+ &lt;h1&gt;AI Automation for</span><br>
+      <span class="fix">&nbsp;&nbsp;Small Business&lt;/h1&gt;</span><br><br>
+      <span class="comment">// Fix: Meta description</span><br>
+      <span class="fix">+ &lt;meta name="description"</span><br>
+      <span class="fix">&nbsp;&nbsp;content="Automate your</span><br>
+      <span class="fix">&nbsp;&nbsp;business with AI..."&gt;</span>
+    </div>
+    <span class="brand">@commandshift</span>
+    <span class="slide-number">07/08</span>
+  </div>
+</body>
+</html>

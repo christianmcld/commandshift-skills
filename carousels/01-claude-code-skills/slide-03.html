@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1080">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1080px; height: 1350px;
+    background: #0A0A0F;
+    font-family: 'Inter', sans-serif;
+    color: #F8FAFC;
+    overflow: hidden;
+  }
+  .slide {
+    width: 100%; height: 100%;
+    padding: 80px;
+    display: flex; flex-direction: column; justify-content: center;
+    position: relative;
+  }
+  .slide::before {
+    content: '';
+    position: absolute; top: -50%; right: -50%;
+    width: 100%; height: 100%;
+    background: radial-gradient(circle, rgba(139,92,246,0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .number {
+    font-size: 120px; font-weight: 900;
+    background: linear-gradient(135deg, #8B5CF6, #6D28D9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
+    margin-bottom: 16px;
+  }
+  .skill-title {
+    font-size: 48px; font-weight: 800;
+    line-height: 1.15; letter-spacing: -1px;
+    margin-bottom: 20px;
+  }
+  .skill-desc {
+    font-size: 28px; font-weight: 400;
+    line-height: 1.5; color: #CBD5E1;
+    margin-bottom: 24px;
+  }
+  .cost-tag {
+    display: inline-block;
+    padding: 10px 24px;
+    background: rgba(239,68,68,0.1);
+    border: 1px solid rgba(239,68,68,0.3);
+    border-radius: 8px;
+    font-size: 22px; font-weight: 600;
+    color: #EF4444;
+    text-decoration: line-through;
+    margin-right: 16px;
+  }
+  .free-tag {
+    display: inline-block;
+    padding: 10px 24px;
+    background: rgba(139,92,246,0.15);
+    border: 1px solid rgba(139,92,246,0.3);
+    border-radius: 8px;
+    font-size: 22px; font-weight: 600;
+    color: #A78BFA;
+  }
+  .slide-number {
+    position: absolute; bottom: 40px; right: 80px;
+    font-size: 16px; font-weight: 500;
+    color: #64748B; letter-spacing: 2px;
+  }
+  .brand {
+    position: absolute; bottom: 40px; left: 80px;
+    font-size: 16px; font-weight: 600;
+    color: #64748B; letter-spacing: 1px;
+  }
+</style>
+</head>
+<body>
+  <div class="slide">
+    <div class="number">01</div>
+    <h2 class="skill-title">SEO Audit Skill</h2>
+    <p class="skill-desc">Crawls any site, analyzes on-page SEO, checks Core Web Vitals, and generates a full report with fixes -- in 3 minutes.</p>
+    <div>
+      <span class="cost-tag">Agency: $500/audit</span>
+      <span class="free-tag">Claude Code: $0</span>
+    </div>
+    <span class="brand">@commandshift</span>
+    <span class="slide-number">03/08</span>
+  </div>
+</body>
+</html>

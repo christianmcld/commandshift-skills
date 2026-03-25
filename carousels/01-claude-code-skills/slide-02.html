@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1080">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1080px; height: 1350px;
+    background: #0A0A0F;
+    font-family: 'Inter', sans-serif;
+    color: #F8FAFC;
+    overflow: hidden;
+  }
+  .slide {
+    width: 100%; height: 100%;
+    padding: 80px;
+    display: flex; flex-direction: column; justify-content: center;
+    position: relative;
+  }
+  .slide::before {
+    content: '';
+    position: absolute; top: -50%; right: -50%;
+    width: 100%; height: 100%;
+    background: radial-gradient(circle, rgba(139,92,246,0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .context {
+    font-size: 24px; font-weight: 500;
+    color: #64748B; margin-bottom: 48px;
+    text-transform: uppercase; letter-spacing: 3px;
+  }
+  .subheadline {
+    font-size: 52px; font-weight: 700;
+    line-height: 1.15; letter-spacing: -1px;
+    margin-bottom: 32px;
+  }
+  .body-text {
+    font-size: 30px; font-weight: 400;
+    line-height: 1.6; color: #CBD5E1;
+  }
+  .purple { color: #A78BFA; }
+  .divider {
+    width: 80px; height: 4px;
+    background: linear-gradient(90deg, #8B5CF6, #A78BFA);
+    border-radius: 2px;
+    margin: 32px 0;
+  }
+  .slide-number {
+    position: absolute; bottom: 40px; right: 80px;
+    font-size: 16px; font-weight: 500;
+    color: #64748B; letter-spacing: 2px;
+  }
+  .brand {
+    position: absolute; bottom: 40px; left: 80px;
+    font-size: 16px; font-weight: 600;
+    color: #64748B; letter-spacing: 1px;
+  }
+</style>
+</head>
+<body>
+  <div class="slide">
+    <p class="context">The Problem</p>
+    <h2 class="subheadline">Agencies charge <span class="purple">$2,000+/mo</span> for work that takes them 4 hours.</h2>
+    <div class="divider"></div>
+    <p class="body-text">SEO audits. Content writing. Website design. Landing pages. Ad campaigns.<br><br>You're paying for overhead, not output.</p>
+    <span class="brand">@commandshift</span>
+    <span class="slide-number">02/08</span>
+  </div>
+</body>
+</html>

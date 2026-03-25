@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1080">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1080px; height: 1350px;
+    background: #0A0A0F;
+    font-family: 'Inter', sans-serif;
+    color: #F8FAFC;
+    overflow: hidden;
+  }
+  .slide {
+    width: 100%; height: 100%;
+    padding: 80px;
+    display: flex; flex-direction: column; justify-content: center;
+    position: relative;
+  }
+  .slide::before {
+    content: '';
+    position: absolute; top: -50%; right: -50%;
+    width: 100%; height: 100%;
+    background: radial-gradient(circle, rgba(139,92,246,0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .step-badge {
+    display: inline-flex;
+    align-items: center; justify-content: center;
+    width: 80px; height: 80px;
+    background: linear-gradient(135deg, #8B5CF6, #6D28D9);
+    border-radius: 50%;
+    font-size: 36px; font-weight: 800;
+    margin-bottom: 32px;
+  }
+  .step-title {
+    font-size: 52px; font-weight: 800;
+    line-height: 1.1; letter-spacing: -1px;
+    margin-bottom: 24px;
+  }
+  .step-desc {
+    font-size: 30px; font-weight: 400;
+    line-height: 1.6; color: #CBD5E1;
+  }
+  .check-list { list-style: none; margin-top: 32px; }
+  .check-list li {
+    font-size: 28px; line-height: 1.5;
+    padding: 12px 0; padding-left: 48px;
+    position: relative; color: #CBD5E1;
+  }
+  .check-list li::before {
+    content: '\2713';
+    position: absolute; left: 0;
+    color: #8B5CF6; font-weight: 700; font-size: 28px;
+  }
+  .slide-number {
+    position: absolute; bottom: 40px; right: 80px;
+    font-size: 16px; font-weight: 500;
+    color: #64748B; letter-spacing: 2px;
+  }
+  .brand {
+    position: absolute; bottom: 40px; left: 80px;
+    font-size: 16px; font-weight: 600;
+    color: #64748B; letter-spacing: 1px;
+  }
+</style>
+</head>
+<body>
+  <div class="slide">
+    <div class="step-badge">4</div>
+    <h2 class="step-title">Finds Keyword Gaps</h2>
+    <p class="step-desc">Maps your current keywords, finds what you're missing, and spots ranking opportunities.</p>
+    <ul class="check-list">
+      <li>Missing long-tail keywords</li>
+      <li>Competitor keyword overlap</li>
+      <li>Content gap analysis</li>
+      <li>Search intent alignment</li>
+    </ul>
+    <span class="brand">@commandshift</span>
+    <span class="slide-number">05/08</span>
+  </div>
+</body>
+</html>

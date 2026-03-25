@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1080">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1080px; height: 1350px;
+    background: #0A0A0F;
+    font-family: 'Inter', sans-serif;
+    color: #F8FAFC;
+    overflow: hidden;
+  }
+  .slide {
+    width: 100%; height: 100%;
+    padding: 80px;
+    display: flex; flex-direction: column; justify-content: center;
+    position: relative;
+  }
+  .slide::before {
+    content: '';
+    position: absolute; top: -50%; right: -50%;
+    width: 100%; height: 100%;
+    background: radial-gradient(circle, rgba(139,92,246,0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .context {
+    font-size: 24px; font-weight: 500;
+    color: #64748B; margin-bottom: 40px;
+    text-transform: uppercase; letter-spacing: 3px;
+  }
+  .comparison {
+    display: flex; gap: 32px;
+    flex: 1; align-items: stretch;
+    max-height: 900px;
+  }
+  .col {
+    flex: 1; padding: 40px;
+    border-radius: 16px;
+    display: flex; flex-direction: column;
+  }
+  .col.left {
+    background: rgba(239,68,68,0.06);
+    border: 1px solid rgba(239,68,68,0.15);
+  }
+  .col.right {
+    background: rgba(139,92,246,0.06);
+    border: 1px solid rgba(139,92,246,0.15);
+  }
+  .col-title {
+    font-size: 28px; font-weight: 700;
+    margin-bottom: 32px; padding-bottom: 16px;
+    border-bottom: 2px solid rgba(255,255,255,0.1);
+  }
+  .col.left .col-title { color: #EF4444; }
+  .col.right .col-title { color: #8B5CF6; }
+  .col-item {
+    font-size: 24px; line-height: 1.5;
+    color: #CBD5E1; padding: 14px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+  }
+  .slide-number {
+    position: absolute; bottom: 40px; right: 80px;
+    font-size: 16px; font-weight: 500;
+    color: #64748B; letter-spacing: 2px;
+  }
+  .brand {
+    position: absolute; bottom: 40px; left: 80px;
+    font-size: 16px; font-weight: 600;
+    color: #64748B; letter-spacing: 1px;
+  }
+</style>
+</head>
+<body>
+  <div class="slide">
+    <p class="context">Head to Head</p>
+    <div class="comparison">
+      <div class="col left">
+        <div class="col-title">ChatGPT</div>
+        <div class="col-item">Chat window only</div>
+        <div class="col-item">Copy-paste workflow</div>
+        <div class="col-item">No file access</div>
+        <div class="col-item">No terminal</div>
+        <div class="col-item">Generic outputs</div>
+        <div class="col-item">Context resets</div>
+        <div class="col-item">$20/mo for GPT-4</div>
+      </div>
+      <div class="col right">
+        <div class="col-title">Claude Code</div>
+        <div class="col-item">Full OS access</div>
+        <div class="col-item">Automated pipelines</div>
+        <div class="col-item">Reads/writes files</div>
+        <div class="col-item">Runs any command</div>
+        <div class="col-item">Context-aware output</div>
+        <div class="col-item">Persistent memory</div>
+        <div class="col-item">$20/mo for Claude</div>
+      </div>
+    </div>
+    <span class="brand">@commandshift</span>
+    <span class="slide-number">05/08</span>
+  </div>
+</body>
+</html>

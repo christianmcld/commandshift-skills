@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1080">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1080px; height: 1350px;
+    background: #0A0A0F;
+    font-family: 'Inter', sans-serif;
+    color: #F8FAFC;
+    overflow: hidden;
+  }
+  .slide {
+    width: 100%; height: 100%;
+    padding: 80px;
+    display: flex; flex-direction: column; justify-content: center;
+    position: relative;
+  }
+  .slide::before {
+    content: '';
+    position: absolute; top: -50%; right: -50%;
+    width: 100%; height: 100%;
+    background: radial-gradient(circle, rgba(139,92,246,0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .step-badge {
+    display: inline-flex;
+    align-items: center; justify-content: center;
+    width: 80px; height: 80px;
+    background: linear-gradient(135deg, #8B5CF6, #6D28D9);
+    border-radius: 50%;
+    font-size: 36px; font-weight: 800;
+    margin-bottom: 32px;
+  }
+  .step-title {
+    font-size: 52px; font-weight: 800;
+    line-height: 1.1; letter-spacing: -1px;
+    margin-bottom: 24px;
+  }
+  .step-desc {
+    font-size: 30px; font-weight: 400;
+    line-height: 1.6; color: #CBD5E1;
+    margin-bottom: 32px;
+  }
+  .report-preview {
+    background: #12121A;
+    border: 1px solid rgba(139,92,246,0.2);
+    border-radius: 16px;
+    padding: 36px;
+  }
+  .report-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+  }
+  .report-row:last-child { border-bottom: none; }
+  .report-label {
+    font-size: 24px; font-weight: 500; color: #CBD5E1;
+  }
+  .report-score {
+    font-size: 24px; font-weight: 700;
+  }
+  .score-good { color: #22C55E; }
+  .score-warn { color: #F59E0B; }
+  .score-bad { color: #EF4444; }
+  .slide-number {
+    position: absolute; bottom: 40px; right: 80px;
+    font-size: 16px; font-weight: 500;
+    color: #64748B; letter-spacing: 2px;
+  }
+  .brand {
+    position: absolute; bottom: 40px; left: 80px;
+    font-size: 16px; font-weight: 600;
+    color: #64748B; letter-spacing: 1px;
+  }
+</style>
+</head>
+<body>
+  <div class="slide">
+    <div class="step-badge">5</div>
+    <h2 class="step-title">Generates the Report</h2>
+    <p class="step-desc">You get a full audit report with scores and prioritized fixes.</p>
+    <div class="report-preview">
+      <div class="report-row">
+        <span class="report-label">Title Tags</span>
+        <span class="report-score score-good">92/100</span>
+      </div>
+      <div class="report-row">
+        <span class="report-label">Meta Descriptions</span>
+        <span class="report-score score-warn">64/100</span>
+      </div>
+      <div class="report-row">
+        <span class="report-label">Heading Structure</span>
+        <span class="report-score score-bad">38/100</span>
+      </div>
+      <div class="report-row">
+        <span class="report-label">Image Alt Text</span>
+        <span class="report-score score-warn">71/100</span>
+      </div>
+      <div class="report-row">
+        <span class="report-label">Internal Links</span>
+        <span class="report-score score-good">85/100</span>
+      </div>
+    </div>
+    <span class="brand">@commandshift</span>
+    <span class="slide-number">06/08</span>
+  </div>
+</body>
+</html>
